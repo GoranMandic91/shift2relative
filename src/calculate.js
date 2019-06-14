@@ -27,7 +27,7 @@ function findRelativePaths(arrayOfAbsRequires, filename, directoryPath) {
   return arrayOfRelRequires;
 }
 
-function resolveAndUpdatePaths(filename, directoryPath) {
+function resolveAndUpdatePaths(filename, directoryPath, dryRun) {
   fs.readFile(filename, 'utf8', (error, data) => {
     if (error) {
       return logger.logError({
@@ -48,7 +48,7 @@ function resolveAndUpdatePaths(filename, directoryPath) {
       req => !req.includes('node_modules'),
     );
 
-    if (arrayOfRelRequires.length) {
+    if (arrayOfRelRequires.length && !dryRun) {
       arrayOfRelRequires.forEach((element, index) => {
         const absPath = arrayOfAbsRequires[index].substring(
           9,
