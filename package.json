@@ -1,0 +1,24 @@
+{
+  "name": "shift2relative",
+  "version": "1.0.0",
+  "description": "Easy migrate to relative require paths in JavaScript",
+  "main": "index.js",
+  "bin": "./index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GoranMandic91/shift2relative.git"
+  },
+  "keywords": [],
+  "author": "Goran Mandic <godzi1991@gmail.com> (https://github.com/GoranMandic91)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GoranMandic91/shift2relative/issues"
+  },
+  "homepage": "https://github.com/GoranMandic91/shift2relative#readme",
+  "dependencies": {
+    "recursive-readdir": "^2.2.2"
+  }
+}
