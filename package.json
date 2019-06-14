@@ -1,11 +1,12 @@
 {
   "name": "shift2relative",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "Easy migrate to relative require paths in JavaScript",
   "main": "index.js",
   "bin": "./src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint src/."
   },
   "repository": {
     "type": "git",
@@ -19,6 +20,12 @@
   },
   "homepage": "https://github.com/GoranMandic91/shift2relative#readme",
   "dependencies": {
+    "prettyjson": "^1.2.1",
     "recursive-readdir": "^2.2.2"
+  },
+  "devDependencies": {
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.17.3"
   }
 }
