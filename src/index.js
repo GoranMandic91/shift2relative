@@ -5,7 +5,7 @@ const path = require("path");
 const recursive = require("recursive-readdir");
 
 const args = process.argv;
-const directoryPath = args[2];
+const directoryPath = process.cwd() + args[2];
 
 function ignoreFile(file, stats) {
   return path.extname(file) !== "" && path.extname(file) !== ".js";

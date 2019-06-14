@@ -1,9 +1,9 @@
 {
   "name": "shift2relative",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Easy migrate to relative require paths in JavaScript",
   "main": "index.js",
-  "bin": "./index.js",
+  "bin": "./src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
