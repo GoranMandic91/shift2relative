@@ -6,8 +6,11 @@ function findRelativePaths(arrayOfAbsRequires, filename, directoryPath) {
   const arrayOfRelRequires = [];
   const requires = {};
   arrayOfAbsRequires.forEach((element, index) => {
-    const elementPath = element.substring(9, element.length - 2);
+    let elementPath = element.substring(9, element.length - 2);
     try {
+      if (elementPath.includes('./')) {
+        elementPath = path.resolve(filename.slice(0, filename.lastIndexOf('/')), elementPath);
+      }
       const absPath = require.resolve(elementPath, { paths: [directoryPath] });
       let relPath = path.relative(path.dirname(filename), absPath);
       if (!relPath.includes('/') || !relPath.includes('..')) {
