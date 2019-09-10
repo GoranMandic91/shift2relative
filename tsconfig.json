@@ -1,7 +1,7 @@
 {
     "compilerOptions": {
-        "module": "commonjs",
         "outDir": "./dist",
+        "module": "commonjs",
         "allowJs": true,
         "target": "es5"
     },
